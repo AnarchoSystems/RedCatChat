@@ -1,0 +1,523 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28244F2026837598000A88EE /* RedCatChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F1F26837598000A88EE /* RedCatChatApp.swift */; };
+		28244F242683759A000A88EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28244F232683759A000A88EE /* Assets.xcassets */; };
+		28244F272683759A000A88EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28244F262683759A000A88EE /* Preview Assets.xcassets */; };
+		28244F4E268375C0000A88EE /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F30268375C0000A88EE /* LoginAPI.swift */; };
+		28244F4F268375C0000A88EE /* WebSocketAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F31268375C0000A88EE /* WebSocketAdapter.swift */; };
+		28244F50268375C0000A88EE /* MockLoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F32268375C0000A88EE /* MockLoginAPI.swift */; };
+		28244F51268375C0000A88EE /* RandomName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F33268375C0000A88EE /* RandomName.swift */; };
+		28244F52268375C0000A88EE /* DebugDelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F34268375C0000A88EE /* DebugDelay.swift */; };
+		28244F53268375C0000A88EE /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F35268375C0000A88EE /* LoginService.swift */; };
+		28244F54268375C0000A88EE /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F36268375C0000A88EE /* WebSocket.swift */; };
+		28244F55268375C0000A88EE /* RandomMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F37268375C0000A88EE /* RandomMessages.swift */; };
+		28244F56268375C0000A88EE /* WebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F38268375C0000A88EE /* WebSocketService.swift */; };
+		28244F57268375C0000A88EE /* MockSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F39268375C0000A88EE /* MockSocket.swift */; };
+		28244F58268375C0000A88EE /* NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F3A268375C0000A88EE /* NSError.swift */; };
+		28244F59268375C0000A88EE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F3C268375C0000A88EE /* LoginView.swift */; };
+		28244F5A268375C0000A88EE /* InitialLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F3D268375C0000A88EE /* InitialLoginView.swift */; };
+		28244F5B268375C0000A88EE /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F3E268375C0000A88EE /* ActivityIndicator.swift */; };
+		28244F5C268375C0000A88EE /* WSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F3F268375C0000A88EE /* WSView.swift */; };
+		28244F5D268375C0000A88EE /* SecondFactorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F40268375C0000A88EE /* SecondFactorView.swift */; };
+		28244F5E268375C0000A88EE /* LoggedOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F41268375C0000A88EE /* LoggedOutView.swift */; };
+		28244F5F268375C0000A88EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F42268375C0000A88EE /* ContentView.swift */; };
+		28244F60268375C0000A88EE /* CommittableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F43268375C0000A88EE /* CommittableView.swift */; };
+		28244F61268375C0000A88EE /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F45268375C0000A88EE /* AppState.swift */; };
+		28244F62268375C0000A88EE /* MessageToServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F46268375C0000A88EE /* MessageToServer.swift */; };
+		28244F63268375C0000A88EE /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F47268375C0000A88EE /* LoginModel.swift */; };
+		28244F64268375C0000A88EE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F48268375C0000A88EE /* User.swift */; };
+		28244F65268375C0000A88EE /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F49268375C0000A88EE /* AppAction.swift */; };
+		28244F66268375C0000A88EE /* ConsoleLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F4A268375C0000A88EE /* ConsoleLog.swift */; };
+		28244F67268375C0000A88EE /* WS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F4B268375C0000A88EE /* WS.swift */; };
+		28244F68268375C0000A88EE /* MessageFromServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F4C268375C0000A88EE /* MessageFromServer.swift */; };
+		28244F69268375C0000A88EE /* WSState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F4D268375C0000A88EE /* WSState.swift */; };
+		2824A0D5268376F300A47FA8 /* RedCat in Frameworks */ = {isa = PBXBuildFile; productRef = 2824A0D4268376F300A47FA8 /* RedCat */; };
+		2824A0D726837AD600A47FA8 /* PasscodeField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824A0D626837AD600A47FA8 /* PasscodeField.swift */; };
+		2888EDCE2683D0BD0015C34C /* RenameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888EDCD2683D0BD0015C34C /* RenameView.swift */; };
+		2888EDD02683D81B0015C34C /* ConsoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888EDCF2683D81B0015C34C /* ConsoleView.swift */; };
+		2888EDD22683D8A40015C34C /* YouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888EDD12683D8A40015C34C /* YouView.swift */; };
+		2888EDD42683D9700015C34C /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888EDD32683D9700015C34C /* EditView.swift */; };
+		2888EDD62683E9EA0015C34C /* DebugDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888EDD52683E9EA0015C34C /* DebugDefaults.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		28244F1C26837598000A88EE /* RedCatChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedCatChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28244F1F26837598000A88EE /* RedCatChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedCatChatApp.swift; sourceTree = "<group>"; };
+		28244F232683759A000A88EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		28244F262683759A000A88EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		28244F282683759A000A88EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28244F292683759A000A88EE /* RedCatChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RedCatChat.entitlements; sourceTree = "<group>"; };
+		28244F30268375C0000A88EE /* LoginAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
+		28244F31268375C0000A88EE /* WebSocketAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketAdapter.swift; sourceTree = "<group>"; };
+		28244F32268375C0000A88EE /* MockLoginAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockLoginAPI.swift; sourceTree = "<group>"; };
+		28244F33268375C0000A88EE /* RandomName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomName.swift; sourceTree = "<group>"; };
+		28244F34268375C0000A88EE /* DebugDelay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugDelay.swift; sourceTree = "<group>"; };
+		28244F35268375C0000A88EE /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		28244F36268375C0000A88EE /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
+		28244F37268375C0000A88EE /* RandomMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomMessages.swift; sourceTree = "<group>"; };
+		28244F38268375C0000A88EE /* WebSocketService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketService.swift; sourceTree = "<group>"; };
+		28244F39268375C0000A88EE /* MockSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSocket.swift; sourceTree = "<group>"; };
+		28244F3A268375C0000A88EE /* NSError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSError.swift; sourceTree = "<group>"; };
+		28244F3C268375C0000A88EE /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		28244F3D268375C0000A88EE /* InitialLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialLoginView.swift; sourceTree = "<group>"; };
+		28244F3E268375C0000A88EE /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		28244F3F268375C0000A88EE /* WSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSView.swift; sourceTree = "<group>"; };
+		28244F40268375C0000A88EE /* SecondFactorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondFactorView.swift; sourceTree = "<group>"; };
+		28244F41268375C0000A88EE /* LoggedOutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedOutView.swift; sourceTree = "<group>"; };
+		28244F42268375C0000A88EE /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		28244F43268375C0000A88EE /* CommittableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommittableView.swift; sourceTree = "<group>"; };
+		28244F45268375C0000A88EE /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		28244F46268375C0000A88EE /* MessageToServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageToServer.swift; sourceTree = "<group>"; };
+		28244F47268375C0000A88EE /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		28244F48268375C0000A88EE /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		28244F49268375C0000A88EE /* AppAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
+		28244F4A268375C0000A88EE /* ConsoleLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleLog.swift; sourceTree = "<group>"; };
+		28244F4B268375C0000A88EE /* WS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WS.swift; sourceTree = "<group>"; };
+		28244F4C268375C0000A88EE /* MessageFromServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageFromServer.swift; sourceTree = "<group>"; };
+		28244F4D268375C0000A88EE /* WSState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSState.swift; sourceTree = "<group>"; };
+		2824A0D626837AD600A47FA8 /* PasscodeField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeField.swift; sourceTree = "<group>"; };
+		2888EDCD2683D0BD0015C34C /* RenameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameView.swift; sourceTree = "<group>"; };
+		2888EDCF2683D81B0015C34C /* ConsoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleView.swift; sourceTree = "<group>"; };
+		2888EDD12683D8A40015C34C /* YouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouView.swift; sourceTree = "<group>"; };
+		2888EDD32683D9700015C34C /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		2888EDD52683E9EA0015C34C /* DebugDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugDefaults.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28244F1926837598000A88EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2824A0D5268376F300A47FA8 /* RedCat in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28244F1326837598000A88EE = {
+			isa = PBXGroup;
+			children = (
+				28244F44268375C0000A88EE /* Models */,
+				28244F2F268375C0000A88EE /* Services */,
+				28244F3B268375C0000A88EE /* Views */,
+				28244F1E26837598000A88EE /* RedCatChat */,
+				28244F1D26837598000A88EE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		28244F1D26837598000A88EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28244F1C26837598000A88EE /* RedCatChat.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28244F1E26837598000A88EE /* RedCatChat */ = {
+			isa = PBXGroup;
+			children = (
+				28244F1F26837598000A88EE /* RedCatChatApp.swift */,
+				28244F232683759A000A88EE /* Assets.xcassets */,
+				28244F282683759A000A88EE /* Info.plist */,
+				28244F292683759A000A88EE /* RedCatChat.entitlements */,
+				28244F252683759A000A88EE /* Preview Content */,
+			);
+			path = RedCatChat;
+			sourceTree = "<group>";
+		};
+		28244F252683759A000A88EE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				28244F262683759A000A88EE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		28244F2F268375C0000A88EE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				28244F30268375C0000A88EE /* LoginAPI.swift */,
+				28244F31268375C0000A88EE /* WebSocketAdapter.swift */,
+				28244F32268375C0000A88EE /* MockLoginAPI.swift */,
+				28244F33268375C0000A88EE /* RandomName.swift */,
+				28244F34268375C0000A88EE /* DebugDelay.swift */,
+				28244F35268375C0000A88EE /* LoginService.swift */,
+				28244F36268375C0000A88EE /* WebSocket.swift */,
+				28244F37268375C0000A88EE /* RandomMessages.swift */,
+				28244F38268375C0000A88EE /* WebSocketService.swift */,
+				28244F39268375C0000A88EE /* MockSocket.swift */,
+				28244F3A268375C0000A88EE /* NSError.swift */,
+				2888EDD52683E9EA0015C34C /* DebugDefaults.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		28244F3B268375C0000A88EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				28244F3C268375C0000A88EE /* LoginView.swift */,
+				28244F3D268375C0000A88EE /* InitialLoginView.swift */,
+				28244F3E268375C0000A88EE /* ActivityIndicator.swift */,
+				28244F3F268375C0000A88EE /* WSView.swift */,
+				28244F40268375C0000A88EE /* SecondFactorView.swift */,
+				28244F41268375C0000A88EE /* LoggedOutView.swift */,
+				28244F42268375C0000A88EE /* ContentView.swift */,
+				28244F43268375C0000A88EE /* CommittableView.swift */,
+				2824A0D626837AD600A47FA8 /* PasscodeField.swift */,
+				2888EDCD2683D0BD0015C34C /* RenameView.swift */,
+				2888EDCF2683D81B0015C34C /* ConsoleView.swift */,
+				2888EDD12683D8A40015C34C /* YouView.swift */,
+				2888EDD32683D9700015C34C /* EditView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		28244F44268375C0000A88EE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				28244F45268375C0000A88EE /* AppState.swift */,
+				28244F46268375C0000A88EE /* MessageToServer.swift */,
+				28244F47268375C0000A88EE /* LoginModel.swift */,
+				28244F48268375C0000A88EE /* User.swift */,
+				28244F49268375C0000A88EE /* AppAction.swift */,
+				28244F4A268375C0000A88EE /* ConsoleLog.swift */,
+				28244F4B268375C0000A88EE /* WS.swift */,
+				28244F4C268375C0000A88EE /* MessageFromServer.swift */,
+				28244F4D268375C0000A88EE /* WSState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		28244F1B26837598000A88EE /* RedCatChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28244F2C2683759A000A88EE /* Build configuration list for PBXNativeTarget "RedCatChat" */;
+			buildPhases = (
+				28244F1826837598000A88EE /* Sources */,
+				28244F1926837598000A88EE /* Frameworks */,
+				28244F1A26837598000A88EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RedCatChat;
+			packageProductDependencies = (
+				2824A0D4268376F300A47FA8 /* RedCat */,
+			);
+			productName = RedCatChat;
+			productReference = 28244F1C26837598000A88EE /* RedCatChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28244F1426837598000A88EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					28244F1B26837598000A88EE = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = 28244F1726837598000A88EE /* Build configuration list for PBXProject "RedCatChat" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 28244F1326837598000A88EE;
+			packageReferences = (
+				2824A0D3268376F300A47FA8 /* XCRemoteSwiftPackageReference "RedCat" */,
+			);
+			productRefGroup = 28244F1D26837598000A88EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				28244F1B26837598000A88EE /* RedCatChat */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		28244F1A26837598000A88EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28244F272683759A000A88EE /* Preview Assets.xcassets in Resources */,
+				28244F242683759A000A88EE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28244F1826837598000A88EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28244F52268375C0000A88EE /* DebugDelay.swift in Sources */,
+				28244F5A268375C0000A88EE /* InitialLoginView.swift in Sources */,
+				28244F66268375C0000A88EE /* ConsoleLog.swift in Sources */,
+				28244F64268375C0000A88EE /* User.swift in Sources */,
+				28244F4F268375C0000A88EE /* WebSocketAdapter.swift in Sources */,
+				2888EDD22683D8A40015C34C /* YouView.swift in Sources */,
+				28244F5E268375C0000A88EE /* LoggedOutView.swift in Sources */,
+				28244F4E268375C0000A88EE /* LoginAPI.swift in Sources */,
+				28244F60268375C0000A88EE /* CommittableView.swift in Sources */,
+				28244F5F268375C0000A88EE /* ContentView.swift in Sources */,
+				28244F5D268375C0000A88EE /* SecondFactorView.swift in Sources */,
+				28244F51268375C0000A88EE /* RandomName.swift in Sources */,
+				28244F5C268375C0000A88EE /* WSView.swift in Sources */,
+				28244F67268375C0000A88EE /* WS.swift in Sources */,
+				28244F50268375C0000A88EE /* MockLoginAPI.swift in Sources */,
+				28244F69268375C0000A88EE /* WSState.swift in Sources */,
+				2888EDD62683E9EA0015C34C /* DebugDefaults.swift in Sources */,
+				28244F65268375C0000A88EE /* AppAction.swift in Sources */,
+				2888EDCE2683D0BD0015C34C /* RenameView.swift in Sources */,
+				2888EDD42683D9700015C34C /* EditView.swift in Sources */,
+				28244F62268375C0000A88EE /* MessageToServer.swift in Sources */,
+				28244F63268375C0000A88EE /* LoginModel.swift in Sources */,
+				28244F55268375C0000A88EE /* RandomMessages.swift in Sources */,
+				28244F56268375C0000A88EE /* WebSocketService.swift in Sources */,
+				28244F59268375C0000A88EE /* LoginView.swift in Sources */,
+				28244F68268375C0000A88EE /* MessageFromServer.swift in Sources */,
+				28244F58268375C0000A88EE /* NSError.swift in Sources */,
+				28244F2026837598000A88EE /* RedCatChatApp.swift in Sources */,
+				28244F61268375C0000A88EE /* AppState.swift in Sources */,
+				2888EDD02683D81B0015C34C /* ConsoleView.swift in Sources */,
+				28244F5B268375C0000A88EE /* ActivityIndicator.swift in Sources */,
+				28244F54268375C0000A88EE /* WebSocket.swift in Sources */,
+				2824A0D726837AD600A47FA8 /* PasscodeField.swift in Sources */,
+				28244F57268375C0000A88EE /* MockSocket.swift in Sources */,
+				28244F53268375C0000A88EE /* LoginService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		28244F2A2683759A000A88EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		28244F2B2683759A000A88EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		28244F2D2683759A000A88EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RedCatChat/RedCatChat.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"RedCatChat/Preview Content\"";
+				DEVELOPMENT_TEAM = 96PP669UPR;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = RedCatChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = RedCatChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		28244F2E2683759A000A88EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RedCatChat/RedCatChat.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"RedCatChat/Preview Content\"";
+				DEVELOPMENT_TEAM = 96PP669UPR;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = RedCatChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = RedCatChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28244F1726837598000A88EE /* Build configuration list for PBXProject "RedCatChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28244F2A2683759A000A88EE /* Debug */,
+				28244F2B2683759A000A88EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28244F2C2683759A000A88EE /* Build configuration list for PBXNativeTarget "RedCatChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28244F2D2683759A000A88EE /* Debug */,
+				28244F2E2683759A000A88EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2824A0D3268376F300A47FA8 /* XCRemoteSwiftPackageReference "RedCat" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AnarchoSystems/RedCat.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2824A0D4268376F300A47FA8 /* RedCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2824A0D3268376F300A47FA8 /* XCRemoteSwiftPackageReference "RedCat" */;
+			productName = RedCat;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 28244F1426837598000A88EE /* Project object */;
+}
