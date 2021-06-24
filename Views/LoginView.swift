@@ -11,7 +11,7 @@ import SwiftUI
 
 struct LoginView : View {
     
-    let model : LoginModel
+    let model : AuthModel
     @EnvironmentObject var store : Store<AppState.Reducer>
     
     @ViewBuilder

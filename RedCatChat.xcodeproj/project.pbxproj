@@ -31,20 +31,24 @@
 		28244F60268375C0000A88EE /* CommittableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F43268375C0000A88EE /* CommittableView.swift */; };
 		28244F61268375C0000A88EE /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F45268375C0000A88EE /* AppState.swift */; };
 		28244F62268375C0000A88EE /* MessageToServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F46268375C0000A88EE /* MessageToServer.swift */; };
-		28244F63268375C0000A88EE /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F47268375C0000A88EE /* LoginModel.swift */; };
+		28244F63268375C0000A88EE /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F47268375C0000A88EE /* AuthModel.swift */; };
 		28244F64268375C0000A88EE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F48268375C0000A88EE /* User.swift */; };
 		28244F65268375C0000A88EE /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F49268375C0000A88EE /* AppAction.swift */; };
 		28244F66268375C0000A88EE /* ConsoleLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F4A268375C0000A88EE /* ConsoleLog.swift */; };
-		28244F67268375C0000A88EE /* WS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F4B268375C0000A88EE /* WS.swift */; };
+		28244F67268375C0000A88EE /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F4B268375C0000A88EE /* Connection.swift */; };
 		28244F68268375C0000A88EE /* MessageFromServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F4C268375C0000A88EE /* MessageFromServer.swift */; };
 		28244F69268375C0000A88EE /* WSState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244F4D268375C0000A88EE /* WSState.swift */; };
 		2824A0D5268376F300A47FA8 /* RedCat in Frameworks */ = {isa = PBXBuildFile; productRef = 2824A0D4268376F300A47FA8 /* RedCat */; };
-		2824A0D726837AD600A47FA8 /* PasscodeField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824A0D626837AD600A47FA8 /* PasscodeField.swift */; };
 		2888EDCE2683D0BD0015C34C /* RenameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888EDCD2683D0BD0015C34C /* RenameView.swift */; };
 		2888EDD02683D81B0015C34C /* ConsoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888EDCF2683D81B0015C34C /* ConsoleView.swift */; };
 		2888EDD22683D8A40015C34C /* YouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888EDD12683D8A40015C34C /* YouView.swift */; };
 		2888EDD42683D9700015C34C /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888EDD32683D9700015C34C /* EditView.swift */; };
 		2888EDD62683E9EA0015C34C /* DebugDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888EDD52683E9EA0015C34C /* DebugDefaults.swift */; };
+		2888EF20268531E30015C34C /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888EF1F268531E30015C34C /* LoginRequest.swift */; };
+		2888EF22268532890015C34C /* EditableMessageToServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888EF21268532890015C34C /* EditableMessageToServer.swift */; };
+		2888EF24268537700015C34C /* UserEventReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888EF23268537700015C34C /* UserEventReducer.swift */; };
+		2888EF26268539210015C34C /* MessageTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888EF25268539210015C34C /* MessageTypes.swift */; };
+		2888EF28268539CC0015C34C /* ReceiveReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888EF27268539CC0015C34C /* ReceiveReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,19 +79,23 @@
 		28244F43268375C0000A88EE /* CommittableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommittableView.swift; sourceTree = "<group>"; };
 		28244F45268375C0000A88EE /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		28244F46268375C0000A88EE /* MessageToServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageToServer.swift; sourceTree = "<group>"; };
-		28244F47268375C0000A88EE /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		28244F47268375C0000A88EE /* AuthModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		28244F48268375C0000A88EE /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		28244F49268375C0000A88EE /* AppAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
 		28244F4A268375C0000A88EE /* ConsoleLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleLog.swift; sourceTree = "<group>"; };
-		28244F4B268375C0000A88EE /* WS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WS.swift; sourceTree = "<group>"; };
+		28244F4B268375C0000A88EE /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		28244F4C268375C0000A88EE /* MessageFromServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageFromServer.swift; sourceTree = "<group>"; };
 		28244F4D268375C0000A88EE /* WSState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSState.swift; sourceTree = "<group>"; };
-		2824A0D626837AD600A47FA8 /* PasscodeField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeField.swift; sourceTree = "<group>"; };
 		2888EDCD2683D0BD0015C34C /* RenameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameView.swift; sourceTree = "<group>"; };
 		2888EDCF2683D81B0015C34C /* ConsoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleView.swift; sourceTree = "<group>"; };
 		2888EDD12683D8A40015C34C /* YouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouView.swift; sourceTree = "<group>"; };
 		2888EDD32683D9700015C34C /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		2888EDD52683E9EA0015C34C /* DebugDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugDefaults.swift; sourceTree = "<group>"; };
+		2888EF1F268531E30015C34C /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		2888EF21268532890015C34C /* EditableMessageToServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableMessageToServer.swift; sourceTree = "<group>"; };
+		2888EF23268537700015C34C /* UserEventReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEventReducer.swift; sourceTree = "<group>"; };
+		2888EF25268539210015C34C /* MessageTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTypes.swift; sourceTree = "<group>"; };
+		2888EF27268539CC0015C34C /* ReceiveReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +179,6 @@
 				28244F41268375C0000A88EE /* LoggedOutView.swift */,
 				28244F42268375C0000A88EE /* ContentView.swift */,
 				28244F43268375C0000A88EE /* CommittableView.swift */,
-				2824A0D626837AD600A47FA8 /* PasscodeField.swift */,
 				2888EDCD2683D0BD0015C34C /* RenameView.swift */,
 				2888EDCF2683D81B0015C34C /* ConsoleView.swift */,
 				2888EDD12683D8A40015C34C /* YouView.swift */,
@@ -184,14 +191,19 @@
 			isa = PBXGroup;
 			children = (
 				28244F45268375C0000A88EE /* AppState.swift */,
-				28244F46268375C0000A88EE /* MessageToServer.swift */,
-				28244F47268375C0000A88EE /* LoginModel.swift */,
+				28244F47268375C0000A88EE /* AuthModel.swift */,
 				28244F48268375C0000A88EE /* User.swift */,
 				28244F49268375C0000A88EE /* AppAction.swift */,
 				28244F4A268375C0000A88EE /* ConsoleLog.swift */,
-				28244F4B268375C0000A88EE /* WS.swift */,
+				28244F4B268375C0000A88EE /* Connection.swift */,
+				28244F46268375C0000A88EE /* MessageToServer.swift */,
+				2888EF25268539210015C34C /* MessageTypes.swift */,
 				28244F4C268375C0000A88EE /* MessageFromServer.swift */,
 				28244F4D268375C0000A88EE /* WSState.swift */,
+				2888EF1F268531E30015C34C /* LoginRequest.swift */,
+				2888EF21268532890015C34C /* EditableMessageToServer.swift */,
+				2888EF23268537700015C34C /* UserEventReducer.swift */,
+				2888EF27268539CC0015C34C /* ReceiveReducer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,6 +218,7 @@
 				28244F1826837598000A88EE /* Sources */,
 				28244F1926837598000A88EE /* Frameworks */,
 				28244F1A26837598000A88EE /* Resources */,
+				2888EF2926853BB20015C34C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -266,6 +279,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2888EF2926853BB20015C34C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		28244F1826837598000A88EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -277,6 +310,7 @@
 				28244F64268375C0000A88EE /* User.swift in Sources */,
 				28244F4F268375C0000A88EE /* WebSocketAdapter.swift in Sources */,
 				2888EDD22683D8A40015C34C /* YouView.swift in Sources */,
+				2888EF22268532890015C34C /* EditableMessageToServer.swift in Sources */,
 				28244F5E268375C0000A88EE /* LoggedOutView.swift in Sources */,
 				28244F4E268375C0000A88EE /* LoginAPI.swift in Sources */,
 				28244F60268375C0000A88EE /* CommittableView.swift in Sources */,
@@ -284,7 +318,7 @@
 				28244F5D268375C0000A88EE /* SecondFactorView.swift in Sources */,
 				28244F51268375C0000A88EE /* RandomName.swift in Sources */,
 				28244F5C268375C0000A88EE /* WSView.swift in Sources */,
-				28244F67268375C0000A88EE /* WS.swift in Sources */,
+				28244F67268375C0000A88EE /* Connection.swift in Sources */,
 				28244F50268375C0000A88EE /* MockLoginAPI.swift in Sources */,
 				28244F69268375C0000A88EE /* WSState.swift in Sources */,
 				2888EDD62683E9EA0015C34C /* DebugDefaults.swift in Sources */,
@@ -292,18 +326,21 @@
 				2888EDCE2683D0BD0015C34C /* RenameView.swift in Sources */,
 				2888EDD42683D9700015C34C /* EditView.swift in Sources */,
 				28244F62268375C0000A88EE /* MessageToServer.swift in Sources */,
-				28244F63268375C0000A88EE /* LoginModel.swift in Sources */,
+				2888EF24268537700015C34C /* UserEventReducer.swift in Sources */,
+				28244F63268375C0000A88EE /* AuthModel.swift in Sources */,
 				28244F55268375C0000A88EE /* RandomMessages.swift in Sources */,
+				2888EF26268539210015C34C /* MessageTypes.swift in Sources */,
 				28244F56268375C0000A88EE /* WebSocketService.swift in Sources */,
 				28244F59268375C0000A88EE /* LoginView.swift in Sources */,
+				2888EF28268539CC0015C34C /* ReceiveReducer.swift in Sources */,
 				28244F68268375C0000A88EE /* MessageFromServer.swift in Sources */,
 				28244F58268375C0000A88EE /* NSError.swift in Sources */,
+				2888EF20268531E30015C34C /* LoginRequest.swift in Sources */,
 				28244F2026837598000A88EE /* RedCatChatApp.swift in Sources */,
 				28244F61268375C0000A88EE /* AppState.swift in Sources */,
 				2888EDD02683D81B0015C34C /* ConsoleView.swift in Sources */,
 				28244F5B268375C0000A88EE /* ActivityIndicator.swift in Sources */,
 				28244F54268375C0000A88EE /* WebSocket.swift in Sources */,
-				2824A0D726837AD600A47FA8 /* PasscodeField.swift in Sources */,
 				28244F57268375C0000A88EE /* MockSocket.swift in Sources */,
 				28244F53268375C0000A88EE /* LoginService.swift in Sources */,
 			);

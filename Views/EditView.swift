@@ -13,7 +13,7 @@ struct EditView : View {
     
     @EnvironmentObject var store : Store<AppState.Reducer>
     
-    var login : LoggedIn? {
+    var login : Session? {
         guard
             case .upgrade(let connection) = store.state,
             case .loggedIn(let login) = connection.state else {
@@ -32,7 +32,7 @@ struct EditView : View {
         }
     }
     
-    func body(login: LoggedIn) -> some View {
+    func body(login: Session) -> some View {
         GeometryReader {geo in
         HStack(spacing: 0) {
         Spacer()
@@ -51,7 +51,7 @@ struct EditView : View {
         }
     }
     
-    func buttons(login: LoggedIn) -> some View {
+    func buttons(login: Session) -> some View {
         GeometryReader {geo in
             VStack(spacing: 0) {
                 Button("Send") {sendMessage(login: login)}
@@ -66,12 +66,12 @@ struct EditView : View {
         }
     }
     
-    func text(login: LoggedIn) -> Binding<String> {
+    func text(login: Session) -> Binding<String> {
         Binding(get: {message(login: login)},
                 set: write)
     }
     
-    func message(login: LoggedIn) -> String {
+    func message(login: Session) -> String {
         login.configurableMessage.message?.content ?? ""
     }
     
@@ -79,7 +79,7 @@ struct EditView : View {
         send(.editMessage(edit: .writing(message)))
     }
     
-    func sendMessage(login: LoggedIn) {
+    func sendMessage(login: Session) {
         send(.sendMessage(.message(Message(sender: login.user,
                                            content: message(login: login)))))
     }
@@ -88,7 +88,7 @@ struct EditView : View {
         store.send(.ws(.logout))
     }
     
-    func send(_ action: WS.State.Action) {
+    func send(_ action: Connection.State.Action) {
         store.send(.ws(.state(action)))
     }
     

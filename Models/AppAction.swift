@@ -9,9 +9,9 @@ import Foundation
 
 enum AppAction {
     
-    case preLogin(LoginModel.Action)
+    case preLogin(AuthModel.Action)
     case enterChat
-    case ws(WS.Action) // swiftlint:disable:this identifier_name
+    case ws(Connection.Action) // swiftlint:disable:this identifier_name
     case receiveLogoutFromServer(URLSessionWebSocketTask.CloseCode)
     case dismissLogoutScreen
     

@@ -10,7 +10,7 @@ import Foundation
 
 struct ConsoleLog : Identifiable {
     
-    let id : UUID = UUID()
+    let id : UUID = UUID() // swiftlint:disable:this identifier_name 
     let content : Content
     
     enum Content {

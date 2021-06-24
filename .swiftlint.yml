@@ -2,6 +2,7 @@ included:
   - Services
   - Models
   - Views
+  - RedCatChat
 disabled_rules:
   - colon
   - vertical_whitespace

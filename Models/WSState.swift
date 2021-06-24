@@ -10,59 +10,62 @@ import RedCat
 import CasePaths
 
 
-extension WS {
+extension Connection {
     
     enum State : Emptyable, Equatable {
         case empty
-        case loggedIn(LoggedIn)
+        case loggedIn(Session)
         case failure(NSError)
     }
+
+}
+
+extension Connection.State {
     
-    struct ReceiveReducer : ReducerProtocol {
+    enum Action {
+        case fail(error: NSError)
+        case editMessage(edit: EditableMessageToServer.EditEvent)
+        case sendMessage(MessageToServer)
+    }
+    
+    struct Reducer : DispatchReducerProtocol {
         
-        func apply(_ action: MessageFromServer, to state: inout WS) {
+        func dispatch(_ action: Action) -> VoidReducer<Connection.State> {
+            
             switch action {
-            case .enterChat(let data):
-                state.lobby = data.lobby
-                state.state = .loggedIn(LoggedIn(user: data.user,
-                                                 configurableMessage: EditableMessageToServer(user: data.user)))
-            case .warning(let warning):
-                state.console.append(.warning(warning.content))
-            case .message(let message):
-                (/WS.State.loggedIn).mutate(&state.state) {login in
-                    if login.user.id == message.sender.id {
-                        login.messageToSend = nil
-                    }
+            
+            case .fail(let error):
+                return VoidReducer {ws in // swiftlint:disable:this identifier_name
+                    ws = .failure(error)
                 }
-                state.console.append(.message(message))
-            case .userEvent(let userEvent):
-                (/WS.State.loggedIn).mutate(&state.state) {login in
-                    if login.user.id == userEvent.user.id {
-                        login.messageToSend = nil
-                    }
-                }
-                switch userEvent.event {
-                case .leave:
-                    state.lobby?.removeAll(where: {$0.id == userEvent.user.id})
-                    state.console.append(.info("\(userEvent.user.name) has left the chat."))
-                case .join:
-                    state.lobby?.append(userEvent.user)
-                    state.console.append(.info("\(userEvent.user.name) has entered the chat."))
-                case .rename:
-                    if
-                        case .loggedIn(var loggedIn) = state.state,
-                        loggedIn.user.id == userEvent.user.id {
-                        state.state = .empty
-                        loggedIn.configurableMessage.user = userEvent.user
-                        loggedIn.user = userEvent.user
-                        state.state = .loggedIn(loggedIn)
-                    }
-                    if let index = state.lobby?.firstIndex(where: {$0.id == userEvent.user.id}) {
-                        let oldName = state.lobby![index].name
-                        state.lobby![index] = userEvent.user
-                        state.console.append(.info("\(oldName) has been renamed to \(userEvent.user.name)."))
-                    }
-                }
+                
+            case .editMessage(let edit):
+                return EditableMessageToServer
+                    .Reducer()
+                    .bind(to: \Session.configurableMessage)
+                    .filter {$0.messageToSend == nil}
+                    .bind(to: /Connection.State.loggedIn)
+                    .send(edit)
+                
+            case .sendMessage(let payload):
+                return ClearOnSendReducer()
+                        .bind(to: /Connection.State.loggedIn)
+                        .send(payload)
+                
+            }
+        }
+        
+    }
+    
+    struct ClearOnSendReducer : ReducerProtocol {
+        
+        func apply(_ action: MessageToServer, to state: inout Session) {
+            state.messageToSend = action
+            switch action {
+            case .message:
+                state.configurableMessage.message = nil
+            case .userEvent:
+                state.configurableMessage.userEvent = nil
             }
         }
         

@@ -13,7 +13,7 @@ struct WSView : View {
     
     @EnvironmentObject var store : Store<AppState.Reducer>
     
-    var connection : WS {
+    var connection : Connection {
         connection(from: store.state)
     }
     
@@ -81,10 +81,10 @@ struct WSView : View {
     
     @ViewBuilder
     var lobby : some View {
-        if let lobby = connection.lobby {
+        if case .loggedIn(let login) = connection.state {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack {
-                    ForEach(lobby, id: \.id){user in
+                    ForEach(login.lobby, id: \.id) {user in
                         Text(user.name)
                             .font(.body.bold())
                     }
@@ -110,9 +110,9 @@ struct WSView : View {
         }
     }
     
-    func connection(from state: AppState) -> WS {
-        guard case .upgrade(let ws) = state else {return WS()}
-        return ws
+    func connection(from state: AppState) -> Connection {
+        guard case .upgrade(let conn) = state else {return Connection()}
+        return conn
     }
     
 }

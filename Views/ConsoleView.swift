@@ -15,18 +15,18 @@ struct ConsoleView : View {
     
     var user : User? {
         guard
-            case .upgrade(let ws) = store.state,
-            case .loggedIn(let login) = ws.state else {
+            case .upgrade(let conn) = store.state,
+            case .loggedIn(let login) = conn.state else {
             return nil
         }
         return login.user
     }
     
     var console : [ConsoleLog] {
-        guard case .upgrade(let ws) = store.state else {
+        guard case .upgrade(let conn) = store.state else {
             return []
         }
-        return ws.console
+        return conn.console
     }
     
     var body : some View {
@@ -36,7 +36,7 @@ struct ConsoleView : View {
                     ForEach(console) {log in
                         viewLog(log)
                             .padding(.vertical, 3)
-                            .onAppear{
+                            .onAppear {
                                 scroll.scrollTo(log.id)
                             }
                     }

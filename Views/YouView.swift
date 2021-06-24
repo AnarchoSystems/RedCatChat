@@ -13,7 +13,7 @@ struct YouView : View {
     
     @EnvironmentObject var store : Store<AppState.Reducer>
     
-    var login : LoggedIn? {
+    var login : Session? {
         guard
             case .upgrade(let connection) = store.state,
             case .loggedIn(let login) = connection.state else {
@@ -69,13 +69,17 @@ struct YouPreview : PreviewProvider {
     
     static var previews : some View {
         YouView()
-            .environmentObject(Store(initialState: AppState.upgrade(WS(state: .loggedIn(LoggedIn(user: user,
-                                                                                                 configurableMessage: EditableMessageToServer(user: user,
-                                                                                                                                              message: nil, userEvent: nil),
-                                                                                                 messageToSend: nil)))),
-                                     reducer: AppState.Reducer()))
+            .environmentObject(Store(
+                                initialState: AppState
+                                    .upgrade(Connection(state: .loggedIn(session))),
+                                reducer: AppState.Reducer()))
     }
     
     static let user = User(id: UUID(), name: "Foo Bar")
+    
+    static let session = Session(lobby: [user],
+                                 user: user,
+                                 configurableMessage: EditableMessageToServer(user: user),
+                                 messageToSend: nil)
     
 }

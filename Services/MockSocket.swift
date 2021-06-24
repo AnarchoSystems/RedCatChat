@@ -7,7 +7,9 @@
 
 import Foundation
 
-class MockSocket : WebSocketProtocol {
+// MARK: CLASS DECLARATION
+
+class MockSocket {
     
     let userID = UUID()
     let userName : String
@@ -28,6 +30,12 @@ class MockSocket : WebSocketProtocol {
         }
     }
     
+}
+
+// MARK: PROTOCOL CONFORMANCE
+
+extension MockSocket : WebSocketProtocol {
+    
     func send(_ value: MessageToServer) {
         
         queue.asyncAfter(deadline: .now() + .milliseconds(.random(in: delay))) {
@@ -44,9 +52,9 @@ class MockSocket : WebSocketProtocol {
         
     }
     
-    func ping() {
+    func ping(onPong: @escaping (Error?) -> Void) {
         queue.asyncAfter(deadline: .now() + .milliseconds(.random(in: delay))) {
-            self.client?.webSocket(didReceivePong: nil)
+            onPong(nil)
         }
     }
     
@@ -56,6 +64,7 @@ class MockSocket : WebSocketProtocol {
     
 }
 
+// MARK: HELPERS
 
 private extension MockSocket {
     

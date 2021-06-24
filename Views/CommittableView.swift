@@ -11,7 +11,7 @@ import SwiftUI
 
 struct CommittableView : View {
     
-    let committable : Committable
+    let committable : LoginRequest
     @EnvironmentObject var store : Store<AppState.Reducer>
     
     var body : some View {

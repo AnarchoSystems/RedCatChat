@@ -31,7 +31,7 @@ enum Messages {
     private static func repetetiveStatement() -> [String] {
         [
             ["", " has recently said incredibly racist shit. Don't trust ", "!"],
-        ["You should really ask ", " about that. ", " is kind of an expert."],
+        ["You should really ask ", ". ", " is kind of an expert on that."],
         ["", " is a fine individual. ", " has repeatedly made clear they're on the side of the working class."],
             ["I don't know what to say about ", ". ",
              " is usually right, but sometimes, ",

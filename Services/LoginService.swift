@@ -9,18 +9,18 @@ import Foundation
 import RedCat
 
 
-class LoginService : DetailService<AppState, Committable?, AppAction> {
+class LoginService : DetailService<AppState, LoginRequest?, AppAction> {
     
     @Injected(\.loginAPI) var loginAPI
     
-    func extractDetail(from state: AppState) -> Committable? {
+    func extractDetail(from state: AppState) -> LoginRequest? {
         guard
             case .preLogin(let model) = state,
             case .loggingIn(let login) = model else {return nil}
         return login
     }
     
-    func onUpdate(newValue: Committable?) {
+    func onUpdate(newValue: LoginRequest?) {
         guard
             let newValue = newValue,
             newValue.isCommitted else {

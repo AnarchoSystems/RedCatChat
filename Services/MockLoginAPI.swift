@@ -22,10 +22,12 @@ struct MockLoginAPI : ResolvedLoginAPI {
                   phoneNumber: String,
                   then: @escaping (Result<String, NSError>) -> Void) {
         queue.asyncAfter(deadline: .now() + .milliseconds(.random(in: delay))) {
+            
             guard userName == UserDefaults.standard.debugUser, password == "open sesame" else {
                 return then(.failure(self.unrecognizedUser))
             }
             then(.success("A verification code was sent to \(phoneNumber). (Well, not really)"))
+            
         }
     }
     
@@ -33,15 +35,18 @@ struct MockLoginAPI : ResolvedLoginAPI {
                password: String,
                secondFactor: String,
                then: @escaping (Result<String, NSError>) -> Void) {
+        
         queue.asyncAfter(deadline: .now() + .milliseconds(.random(in: delay))) {
             guard secondFactor == "123456" else {
                 return then(.failure(self.bad2ndFactor))
             }
             then(.success(self.fakeAuthString))
+            
         }
     }
     
     func getWebSocket(token: String, then: @escaping (Result<WebSocketProtocol, NSError>) -> Void) {
+        
         queue.asyncAfter(deadline: .now() + .milliseconds(.random(in: delay))) {
             guard token == self.fakeAuthString else {
                 return then(.failure(badAuthToken))
@@ -49,6 +54,7 @@ struct MockLoginAPI : ResolvedLoginAPI {
             then(.success(MockSocket(userName: UserDefaults.standard.debugUser,
                                      delay: self.delay)))
         }
+        
     }
     
     // MARK: ERRORS

@@ -11,8 +11,8 @@ import Foundation
 extension UserDefaults {
     
     var debugUser : String {
-        get{string(forKey: "debugUser") ?? "Sudo Login"}
-        set{set(newValue, forKey: "debugUser")}
+        get {string(forKey: "debugUser") ?? "Sudo Login"}
+        set {set(newValue, forKey: "debugUser")}
     }
     
 }

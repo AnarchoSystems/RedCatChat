@@ -8,17 +8,23 @@
 import Foundation
 import RedCat
 
+// MARK: STATE
+
 enum WSServiceState : Equatable {
     case loggedOut
     case justLoggedIn
     case loginRequested(String)
-    case loggedIn(LoggedIn)
+    case loggedIn(Session)
 }
+
+// MARK: CLASS DECLARATION
 
 class WebSocketService : DetailService<AppState, WSServiceState, AppAction> {
     
     @Injected(\.loginAPI) var loginAPI
     var connection : WebSocketProtocol?
+    
+    // MARK: EXTRACT DETAIL
     
     func extractDetail(from state: AppState) -> WSServiceState {
         switch state {
@@ -48,6 +54,8 @@ class WebSocketService : DetailService<AppState, WSServiceState, AppAction> {
         }
     }
     
+    // MARK: ON UPDATE
+    
     func onUpdate(newValue: WSServiceState) {
         
         switch newValue {
@@ -65,7 +73,9 @@ class WebSocketService : DetailService<AppState, WSServiceState, AppAction> {
         
     }
     
-    func acquireWebSocket(token: String) {
+    // MARK: HELPERS
+    
+    private func acquireWebSocket(token: String) {
         loginAPI.getWebSocket(token: token) {response in
             DispatchQueue.main.async {
                 switch response {
@@ -80,31 +90,22 @@ class WebSocketService : DetailService<AppState, WSServiceState, AppAction> {
         }
     }
     
-    func onBusinessUpdate(newValue: LoggedIn) {
+    private func onBusinessUpdate(newValue: Session) {
         guard let message = newValue.messageToSend else {return}
         guard case .loggedIn(let oldValue) = oldValue else {
-            return sendMessageToServer(message)
+            connection?.send(message)
+            return
         }
         if message != oldValue.messageToSend {
-            sendMessageToServer(message)
+            connection?.send(message)
         }
     }
     
 }
 
-private extension WebSocketService {
-    
-    func sendMessageToServer(_ message: MessageToServer) {
-        connection?.send(message)
-    }
-    
-}
+// MARK: DELEGATE METHODS
 
 extension WebSocketService : WebSocketClient {
-    
-    func webSocket(couldNotSendMessage message: MessageToServer, reason: Error) {
-        
-    }
     
     func webSocket(didReceiveMessage message: MessageFromServer) {
         DispatchQueue.main.async {
@@ -112,16 +113,8 @@ extension WebSocketService : WebSocketClient {
         }
     }
     
-    func webSocket(didReceiveInvalidMessage message: URLSessionWebSocketTask.Message, withError: Error) {
-        
-    }
-    
     func webSocket(didReceiveError error: Error) {
-        
-    }
-    
-    func webSocket(didReceivePong pong: Error?) {
-        
+        store.send(.ws(.receive(.warning(Warning(content: error.localizedDescription)))))
     }
     
     func webSocket(didCloseConnection code: URLSessionWebSocketTask.CloseCode, reason: Data?) {

@@ -30,21 +30,17 @@ class WebSocketAdapter : NSObject, WebSocketProtocol {
         }
             ws.send(.string(result)) {[weak self] err in
                 if let err = err {
-                    self?.client?.webSocket(couldNotSendMessage: value,
-                                            reason: err)
+                    self?.client?.webSocket(didReceiveError: err)
                 }
             }
         }
         catch {
-            client?.webSocket(couldNotSendMessage: value,
-                              reason: error)
+            client?.webSocket(didReceiveError: error)
         }
     }
     
-    func ping() {
-        ws.sendPing {[weak self] err in
-            self?.client?.webSocket(didReceivePong: err)
-        }
+    func ping(onPong: @escaping (Error?) -> Void) {
+        ws.sendPing(pongReceiveHandler: onPong)
     }
     
     func close() {
@@ -80,8 +76,7 @@ private extension WebSocketAdapter {
     
     func handleSuccessfulMessage(_ msg: URLSessionWebSocketTask.Message) {
         guard case .string(let string) = msg else {
-            client?.webSocket(didReceiveInvalidMessage: msg,
-                                     withError: NoUTF8Error())
+            client?.webSocket(didReceiveError: NoUTF8Error())
             return
         }
         do {
@@ -93,8 +88,7 @@ private extension WebSocketAdapter {
             client?.webSocket(didReceiveMessage: value)
         }
         catch {
-            client?.webSocket(didReceiveInvalidMessage: msg,
-                              withError: error)
+            client?.webSocket(didReceiveError: error)
         }
     }
     
